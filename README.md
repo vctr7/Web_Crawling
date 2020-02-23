@@ -1,6 +1,6 @@
 # Web Crawling by Python
 
-Crawl Korean data from web site.
+Crawl Korean data from a website.
   
 - [Naver Movie(Review-aggregation website)](https://movie.naver.com/)
     
