@@ -1,4 +1,4 @@
-# Web_Crawling
+# Web_Crawling by Python
 
 Crawl Korean data from web site.
   
@@ -6,9 +6,11 @@ Crawl Korean data from web site.
     
 - [Yes24(Online Book Store)](http://www.yes24.com/Main/default.aspx)
 
-## Data
+## Goals
 
 - Collect movie and book summaries(overviews) for recommendation system based on natural launguage process.
+
+- Extract text data from html and delete an unnecessary characters.
 
 ## Main Libraries
 
@@ -16,7 +18,7 @@ Crawl Korean data from web site.
 
 - bs4(BeautifulSoup)
 
-## Technic
+## Technics
 
 #### Selenium
 
@@ -35,3 +37,5 @@ Crawl Korean data from web site.
 ## References
 
 - [https://wkdtjsgur100.github.io/selenium-does-not-work-to-click/](https://wkdtjsgur100.github.io/selenium-does-not-work-to-click/)
+
+- [https://kmkidea.tistory.com/49](https://kmkidea.tistory.com/49)
