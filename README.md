@@ -8,9 +8,9 @@ Crawl Korean data from a website.
 
 ## Goals
 
-- Collect movie and book summaries(overviews) for recommendation system based on natural launguage process.
+- Collect movie and book summaries(overviews) for recommendation system.
 
-- Extract text data from html and delete an unnecessary characters.
+- Extract text data from html and delete an unnecessary characters for NLP(natural language process).
 
 ## Main Libraries
 
