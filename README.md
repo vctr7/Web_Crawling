@@ -12,6 +12,8 @@ Crawl Korean data from a website.
 
 - Extract text data from html and delete an unnecessary characters for NLP(natural language process).
 
+- Save data as txt. file
+
 ## Main Libraries
 
 - Selenium
