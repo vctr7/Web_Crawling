@@ -1,4 +1,4 @@
-# Web_Crawling by Python
+# Web Crawling by Python
 
 Crawl Korean data from web site.
   
