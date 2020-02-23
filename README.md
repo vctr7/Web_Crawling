@@ -1,6 +1,6 @@
-# Web Crawling by Python
+# Web Crawler by Python
 
-Crawl Korean data from a website.
+Collect Korean data from a website.
   
 - [Naver Movie(Review-aggregation website)](https://movie.naver.com/)
     
@@ -8,11 +8,11 @@ Crawl Korean data from a website.
 
 ## Goals
 
-- Collect movie and book summaries(overviews) for recommendation system.
+- Aggregate movie and book summaries(overviews) for recommendation system.
 
 - Extract text data from html and delete an unnecessary characters for NLP(natural language process).
 
-- Save data as txt. file
+- Save data as .txt file
 
 ## Main Libraries
 
