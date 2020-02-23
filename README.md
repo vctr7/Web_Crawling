@@ -10,7 +10,7 @@ Collect Korean data from a website.
 
 - Clipping movie and book summaries(overviews) for recommendation system.
 
-- Extract text data from html and delete an unnecessary characters for NLP(natural language process).
+- Extract text data from html and delete unnecessary characters for NLP(natural language process).
 
 - Save data as .txt file
 
