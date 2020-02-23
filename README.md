@@ -8,7 +8,7 @@ Collect Korean data from a website.
 
 ## Goals
 
-- Aggregate movie and book summaries(overviews) for recommendation system.
+- Clipping movie and book summaries(overviews) for recommendation system.
 
 - Extract text data from html and delete an unnecessary characters for NLP(natural language process).
 
