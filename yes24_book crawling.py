@@ -16,7 +16,6 @@ page = 1
 
 
 while 1:
-
     if page > 50:
         break
 
@@ -26,7 +25,6 @@ while 1:
     driver.get(path)
 
     for i in range(0, 20):
-
         xpath = '//*[@id="category_layout"]/tbody/tr[' + str((2*i)+1) + ']/td[3]/p[1]/a[1]'
         driver.implicitly_wait(10)
         URL = driver.find_element_by_xpath(xpath).get_attribute("href")
@@ -46,7 +44,6 @@ while 1:
 
         overview = ' '.join(content.get_text().split())
 
-
         driver.implicitly_wait(10)
         element = driver.find_element_by_xpath(xpath)
         driver.execute_script("arguments[0].click();", element)
@@ -57,7 +54,6 @@ while 1:
         if not title:
             print('title error')
 
-
         driver.implicitly_wait(10)
         poster = driver.find_element_by_xpath('//*[@id="yDetailTopWrap"]/div[1]/div[1]/span/em/img').get_attribute("src")
 
@@ -67,12 +63,13 @@ while 1:
         with open("book_novel.txt", 'a', encoding='utf-8') as f:
             f.write(title + '\u241E' + URL + '\u241E' + ' '.join(tokenizer.nouns(overview)) + '\u241E' + poster + '\n')
 
-        print('No. :', count)
-        print('PAGE :', page)
-        print('URL :', URL)
-        print('Title :', title)
-        print('Overview :', overview)
-        print('img src :', poster)
+        print(overview)
+        book_info = {"Np.": count,
+                     "PAGE": page,
+                     "URL": URL,
+                     "TITLE": title,
+                     "IMG_SRC": poster}
+        print(book_info)
         print('========================================================================================================================================================================================================================================================')
 
         count = count + 1

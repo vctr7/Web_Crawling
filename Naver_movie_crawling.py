@@ -77,16 +77,20 @@ def crawling(year, target_link):
     genres = info.find_all('a', href=re.compile("/movie/sdb/browsing/bmovie.nhn\?genre"))
 
     genre_array = []
+
     for genre in genres:
         genre_array.append(genre.get_text())
+
     grade_list = ['전체 관람가', '12세 관람가', '15세 관람가', '청소년 관람불가', '제한상영가', '등급보류']
     grade = info.find('a', href=re.compile("/movie/sdb/browsing/bmovie.nhn\?grade"))
+
     if not grade:
         return None
 
     grade = grade.get_text()
     if grade in grade_list:
         grade = grade_list.index(grade)
+
     raw_main_story = content.find('p', class_='con_tx')
 
     if not raw_main_story:
@@ -95,9 +99,8 @@ def crawling(year, target_link):
     raw_main_story = raw_main_story.prettify(formatter="html")
     raw_main_story = (re.sub(r'<.*>', "", raw_main_story))
     uni_main_story = single_line((re.sub(r'&.*;', "", raw_main_story)))
-    main_story = uni_to_utf8(uni_main_story)
-    with open("movie_overview.txt", 'a', encoding='utf-8') as f:
 
+    with open("movie_overview.txt", 'a', encoding='utf-8') as f:
         f.write(movie_name + '\u241E' + target_link + '\u241E' + ' '.join(tokenizer.nouns(uni_main_story)) + '\u241E' + poster_src + '\n')
 
     print(uni_main_story)
@@ -105,13 +108,13 @@ def crawling(year, target_link):
     movie = {"year": year,
              "movie_name": movie_name,
              "score": score,
-             "grade": grade}  # create movie
+             "grade": grade}
     print(movie)
     print("---------------------------------")
 
 
-
 def get_link(target_page):
+
     url = target_page
     r = requests.get(url)
     data = r.text
