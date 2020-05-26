@@ -1,6 +1,6 @@
 # Web Crawler by Python
 
-Collect Korean data from a website.
+Collect Korean data from websites.
   
 - [Naver Movie(Review-aggregation website)](https://movie.naver.com/)
     
